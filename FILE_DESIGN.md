@@ -11,6 +11,8 @@ codex-resstyle-skill/
 ├── FILE_DESIGN.md
 ├── CHANGELOG.md
 ├── LICENSE.md
+├── RELEASE_NOTES_v0.1.0.md
+├── ROADMAP.md
 ├── .gitignore
 ├── validate.sh
 ├── install.sh
@@ -124,7 +126,9 @@ codex-resstyle-skill/
 ## Git 배포용 마감 파일
 - `.gitignore`: Python cache / macOS metadata / temp files 제외
 - `CHANGELOG.md`: 패키지 변경 이력
-- `LICENSE.md`: 라이선스 선택 전 임시 배포 정책 명시
+- `LICENSE.md`: MIT 라이선스
+- `RELEASE_NOTES_v0.1.0.md`: GitHub Release 본문 초안
+- `ROADMAP.md`: `v0.1.0` 이후 우선순위 초안
 - `validate.sh`: init / sync / install smoke 검증
 
 ## 추천 확장 포인트
