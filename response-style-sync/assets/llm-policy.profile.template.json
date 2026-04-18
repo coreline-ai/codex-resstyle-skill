@@ -1,0 +1,43 @@
+{
+  "profile_id": "project-llm-policy",
+  "cloud_api_rules": {
+    "default": "avoid",
+    "allow_only_when_unavoidable": true,
+    "require_reason_logging": true,
+    "require_user_approval_for_paid_cloud_usage": true
+  },
+  "proxy_rules": {
+    "prefer_proxy_first": true,
+    "prefer_local_or_oauth_backed_routes": true,
+    "preferred_project_proxy": "https://github.com/coreline-ai/multi_model_tui"
+  },
+  "preferred_proxies": [
+    "https://github.com/coreline-ai/multi_model_tui",
+    "https://github.com/matdev83/llm-interactive-proxy",
+    "https://github.com/Nayjest/lm-proxy",
+    "https://github.com/1rgs/claude-code-proxy"
+  ],
+  "proxy_selection_checks": [
+    "API compatibility with Anthropic/OpenAI/Responses surfaces",
+    "Streaming correctness",
+    "tool_call and tool_result history support",
+    "Hosted tools support clarity",
+    "Auth, logging, and request tracing",
+    "Batch and capabilities endpoints",
+    "Human input handling or explicit failure mode",
+    "Operational clarity and maintenance posture"
+  ],
+  "research_rules": {
+    "search_current_open_source_before_new_proxy_work": true,
+    "prefer_primary_sources": true,
+    "record_selection_reason": true
+  },
+  "compliance_rules": {
+    "avoid_subscription_bypass_by_default": true,
+    "avoid_unclear_tos_workarounds": true
+  },
+  "override_rules": [
+    "Higher-priority system and developer instructions override this policy.",
+    "A direct user request in the current conversation overrides this policy."
+  ]
+}

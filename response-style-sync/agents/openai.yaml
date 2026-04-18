@@ -1,0 +1,7 @@
+interface:
+  display_name: "Response Style Sync"
+  short_description: "Sync response-style rules to AGENT.md and CLAUDE.md."
+  default_prompt: "Use $response-style-sync to create or update a response-style profile and sync it into AGENT.md / CLAUDE.md for this project."
+
+policy:
+  allow_implicit_invocation: true

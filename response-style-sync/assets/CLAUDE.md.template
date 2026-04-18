@@ -1,0 +1,12 @@
+# CLAUDE.md
+
+<!-- BEGIN RESPONSE-STYLE-SYNC -->
+## Response Style Profile
+{{response_style_block}}
+
+## Agent Execution Policy
+{{agent_policy_block}}
+
+## LLM / Proxy Policy
+{{llm_policy_block}}
+<!-- END RESPONSE-STYLE-SYNC -->
