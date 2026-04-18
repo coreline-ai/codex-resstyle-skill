@@ -1,6 +1,12 @@
 # codex-resstyle-skill
 
+[![Release](https://img.shields.io/github/v/release/coreline-ai/codex-resstyle-skill?display_name=tag)](https://github.com/coreline-ai/codex-resstyle-skill/releases)
+[![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](./LICENSE.md)
+[![Validate](https://img.shields.io/badge/validate-local%20script-blue)](#validate-before-release)
+
 Reusable Codex skill package for managing three project rule profiles and syncing them into `AGENT.md` / `CLAUDE.md`.
+
+**Current release target:** `v0.1.0`
 
 ## What this package manages
 
@@ -39,7 +45,9 @@ Reusable Codex skill package for managing three project rule profiles and syncin
 - `CHANGELOG.md`
   - package change history
 - `LICENSE.md`
-  - current distribution status for this package
+  - MIT license
+- `RELEASE_NOTES_v0.1.0.md`
+  - GitHub release body draft for the first release
 - `validate.sh`
   - local smoke validation script
 - `install.sh`
@@ -75,7 +83,8 @@ The sync script still accepts old keys for backward compatibility.
 ## Initialize a new 3-profile bundle
 
 ```bash
-python3 response-style-sync/scripts/sync_project_rules.py   --init-bundle-dir ./.codex/rules
+python3 response-style-sync/scripts/sync_project_rules.py \
+  --init-bundle-dir ./.codex/rules
 ```
 
 This creates:
@@ -86,24 +95,35 @@ This creates:
 ## Sync into a project
 
 ```bash
-python3 response-style-sync/scripts/sync_project_rules.py   --project /path/to/project   --style-profile /path/to/response-style.profile.json   --agent-policy /path/to/agent-policy.profile.json   --llm-policy /path/to/llm-policy.profile.json
+python3 response-style-sync/scripts/sync_project_rules.py \
+  --project /path/to/project \
+  --style-profile /path/to/response-style.profile.json \
+  --agent-policy /path/to/agent-policy.profile.json \
+  --llm-policy /path/to/llm-policy.profile.json
 ```
 
 ## Backward-compatible style-only flow
 
 ```bash
-python3 response-style-sync/scripts/sync_response_style.py   --init-profile ./.codex/response-style.profile.json
+python3 response-style-sync/scripts/sync_response_style.py \
+  --init-profile ./.codex/response-style.profile.json
 
-python3 response-style-sync/scripts/sync_response_style.py   --project /path/to/project   --profile /path/to/response-style.profile.json
+python3 response-style-sync/scripts/sync_response_style.py \
+  --project /path/to/project \
+  --profile /path/to/response-style.profile.json
 ```
 
 ## Example: apply bundled coreline profiles
 
 ```bash
-python3 response-style-sync/scripts/sync_project_rules.py   --project /path/to/project   --style-profile ./examples/coreline-agent.response-style.json   --agent-policy ./examples/coreline-agent.agent-policy.json   --llm-policy ./examples/coreline-agent.llm-policy.json
+python3 response-style-sync/scripts/sync_project_rules.py \
+  --project /path/to/project \
+  --style-profile ./examples/coreline-agent.response-style.json \
+  --agent-policy ./examples/coreline-agent.agent-policy.json \
+  --llm-policy ./examples/coreline-agent.llm-policy.json
 ```
 
-## Validate before Git push
+## Validate before release
 
 ```bash
 ./validate.sh
@@ -112,9 +132,17 @@ python3 response-style-sync/scripts/sync_project_rules.py   --project /path/to/p
 What it checks:
 - Python syntax
 - starter bundle init
-- AGENT.md / CLAUDE.md generation
+- `AGENT.md` / `CLAUDE.md` generation
 - legacy style-only wrapper
 - temp `CODEX_HOME` install smoke
+
+## Release notes draft
+
+For the first GitHub release, start from:
+- `RELEASE_NOTES_v0.1.0.md`
+
+Recommended tag:
+- `v0.1.0`
 
 ## Recommended usage pattern
 
@@ -125,8 +153,3 @@ What it checks:
   - `concise-korean.response-style.json`
   - `review-heavy.agent-policy.json`
   - `proxy-first-strict.llm-policy.json`
-
-## Git distribution note
-
-`LICENSE.md` is currently a conservative placeholder (`All rights reserved until the owner picks a public license`).
-Choose and replace it before publishing this package as open source.
