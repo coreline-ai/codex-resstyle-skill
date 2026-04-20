@@ -1,3 +1,7 @@
+<div align="center">
+
+<img width="800" height="450" alt="똑똑한 프로젝트 규칙 관리 가이드" src="https://github.com/user-attachments/assets/a18ed235-f42b-4a7e-97c5-c0853cf5a579" />
+
 # codex-resstyle-skill
 
 [![Release](https://img.shields.io/github/v/release/coreline-ai/codex-resstyle-skill?display_name=tag)](https://github.com/coreline-ai/codex-resstyle-skill/releases)
@@ -7,6 +11,8 @@
 Reusable Codex skill package for managing three project rule profiles and syncing them into `AGENT.md` / `CLAUDE.md`.
 
 **Current release:** `v0.1.0`
+
+</div>
 
 Quick links:
 - [Release notes](./RELEASE_NOTES_v0.1.0.md)
