@@ -1,6 +1,8 @@
 <div align="center">
 
-<img width="800" height="450" alt="똑똑한 프로젝트 규칙 관리 가이드" src="https://github.com/user-attachments/assets/a18ed235-f42b-4a7e-97c5-c0853cf5a579" />
+<img width="2752" height="1536" alt="AI 규칙 관리자 활용 가이드" src="https://github.com/user-attachments/assets/b01ca766-1c7d-4420-a9cc-69cba081043b" />
+
+<img width="0" height="0" alt="똑똑한 프로젝트 규칙 관리 가이드" src="https://github.com/user-attachments/assets/a18ed235-f42b-4a7e-97c5-c0853cf5a579" />
 
 # codex-resstyle-skill
 
